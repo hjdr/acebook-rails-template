@@ -1,24 +1,50 @@
-<h2>Welcome to <%= @user.email %>'s wall</h2>
+<div class="container">
+  <div class="row">
+    <div class="col s12 m8 offset-m2">
+      <div class="card-panel light-blue darken-4">
+        <h2 class="white-text">Post to <%= @user.email %>'s wall</h2>
+          <%= form_for @post do |form| %>
+            <div class="input-field">
+              <%= form.label :message, class: "white-text" %>
+              <%= form.text_area :message, class: "white-text" %>
+              <%= form.text_area :wall_id, value: params[:id], hidden: true %>
+              <%= form.submit "Submit", class: "btn waves-effect waves-light white" %>
+            </div>
+          <% end %>
+
+      </div>
+    </div>
+  </div>
+</div>
 
 <ul id="wall">
   <% @posts.each do |post| %>
     <li>
-    <div id=<=% post.id %>
-      <p><%= simple_format(post.message) %></p>
-      <p><% raw_post_time = Time.parse(post.created_at.to_s[0, post.created_at.to_s.length - 3]) %>
-      <%post_time = raw_post_time +60*60%></p>
-      <p> <%= post_time.strftime("%d/%m/%Y %H:%M") %> </p>
-      <%= link_to('Edit Post', edit_post_url(post)) %>
-      <%= link_to('Delete Post', post_url(post), method: :delete) %>
-    </div>
+      <div id=<%= post.id %>>
+        <div class="row">
+          <div class="col s12 m6 offset-m3">
+            <div class="card light-blue darken-4">
+              <div class="card-content white-text">
+                <span class="card-title">
+                  Name goes here @
+
+                  <% raw_post_time = Time.parse(post.created_at.to_s[0, post.created_at.to_s.length - 3]) %>
+                  <%post_time = raw_post_time +60*60%>
+                  <%= post_time.strftime("%d/%m/%Y %H:%M") %>
+
+                </span>
+
+                <p><%= simple_format(post.message) %></p>
+
+              </div>
+              <div class="card-action">
+                <%= link_to('Edit Post', edit_post_url(post)) %>
+                <%= link_to('Delete Post', post_url(post), method: :delete) %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </li>
   <% end %>
 </ul>
-
-<%= form_for @post do |form| %>
-
-  <%= form.label :message %>
-  <%= form.text_area :message %>
-  <%= form.text_area :wall_id, value: params[:id], hidden: true %>
-  <%= form.submit "Submit" %>
-<% end %>
