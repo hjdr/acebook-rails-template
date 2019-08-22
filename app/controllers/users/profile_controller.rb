@@ -1,3 +1,3 @@
-class Users::ProfileController < Devise::ProfileController
+# class Users::ProfileController < Devise::ProfileController
 
-end
+# end
