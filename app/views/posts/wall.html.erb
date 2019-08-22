@@ -10,7 +10,7 @@
       <p> <%= post_time.strftime("%d/%m/%Y %H:%M") %> </p>
       <% if post.author_id == current_user.id %>
       <%= link_to('Edit Post', edit_post_url(post)) %>
-      <%= link_to('Delete Post', post_url(post), method: :delete) %>
+      <%= link_to('Delete Post', post_url(post, @user), method: :delete) %>
       <% end %>
     </div>
     </li>

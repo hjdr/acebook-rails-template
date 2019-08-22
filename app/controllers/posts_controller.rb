@@ -17,11 +17,11 @@ class PostsController < ApplicationController
   end
 
   def index
-    @posts = Post.all.reverse
+    redirect_to "/wall/#{current_user.id}"
   end
 
   def wall
-    @posts = Post.where("wall_id = '#{params[:id]}'").reverse
+    @posts = Post.where("wall_id = '#{params[:id]}'").order(created_at: :desc)
     @post = Post.new
     @user = User.find(params[:id])
   end
@@ -33,8 +33,7 @@ class PostsController < ApplicationController
   def destroy
     @post = Post.find_by_id(params[:id])
     @post.destroy
-
-    redirect_to posts_url
+    redirect_to "/wall/#{@post.wall_id}"
   end
 
   def update

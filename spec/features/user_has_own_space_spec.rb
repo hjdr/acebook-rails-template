@@ -21,4 +21,8 @@ RSpec.feature "Own Wall", type: :feature do
     visit url
     expect(page).not_to have_content('Edit Post')
   end
+  scenario 'users can only view posts on walls' do
+  sign_up
+  expect(page).not_to have_content('Posts')
+  end
 end
