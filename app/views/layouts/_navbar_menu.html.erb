@@ -1,6 +1,18 @@
 <% if user_signed_in? %>
-  
+
   <li><%= link_to('Signout', destroy_user_session_path, method: :delete)%></li>
+  <li><%= link_to('My Wall', posts_path, method: :get)%></li>
+  <!-- <li>
+     <div class="center row">
+        <div class="col s12 ">
+          <div class="row" id="topbarsearch">
+            <div class="input-field col s6 s12">
+              <input type="text" placeholder="Search" id="autocomplete-input" class="white-text" >
+            </div>
+          </div>
+        </div>
+      </div>
+  </li> -->
 <% else %>
   <li><%= link_to('Login', '/users/sign_in')%></li>
   <li><%= link_to('Signup', '/users/sign_up')%></li>
