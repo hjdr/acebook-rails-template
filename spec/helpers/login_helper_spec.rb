@@ -17,9 +17,9 @@ end
 #   click_button "Sign up"
 # end
 
-def log_in
-  visit('/')
-  fill_in "Email", with: "ben@test.com"
-  fill_in "Password", with: "testing"
-  click_button "commit"
-end
+# def log_in
+#   visit('/')
+#   fill_in "Email", with: "ben@test.com"
+#   fill_in "Password", with: "testing"
+#   click_button "commit"
+# end
