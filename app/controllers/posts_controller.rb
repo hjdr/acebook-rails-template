@@ -47,4 +47,13 @@ class PostsController < ApplicationController
     redirect_to "/wall/#{current_user.id}"
   end
 
+  def search
+    @user = User.find_by email: params[:search]
+
+    if @user
+      redirect_to "/wall/#{@user.id}"
+    end
+
+  end
+
 end
