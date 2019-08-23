@@ -78,7 +78,10 @@ is called and this information is displayed on the corresponding .erb file in ap
 commands like here https://stackoverflow.com/questions/22815009/add-a-reference-column-migration-in-rails-4
 
 ## App User's Guide
- --Users have to sign up with an email address and be logged in before using the website
+ --Users have to sign up with an email address and be logged in before using the website.
+ 
  --After signing-up or logging-in , users are redirected to their wall.
- --A user can post a message on their wall or  visit another user's wall and post a message there
- --A user can edit their own posts within 10 minutes of making the post, or they can delete their posts
+ 
+ --A user can post a message on their wall or  visit another user's wall and post a message there.
+ 
+ --A user can edit their own posts within 10 minutes of making the post, or they can delete their posts.
