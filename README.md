@@ -55,11 +55,15 @@ https://trello.com/b/uV5OEJNn/acebook
 1. Fork this github repo
 2. Clone your fork into your projects directory
 3. In the terminal, enter the following commands:
+```bash
 >bundle install
 >rake db:create
 >rake db:migrate
+```
 4. To launch the application, enter in the terminal
+```bash
 >rails s
+```
 
 ## App Code Introduction For Future Developers
 
