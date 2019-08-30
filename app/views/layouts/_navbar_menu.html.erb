@@ -1,6 +1,14 @@
 <% if user_signed_in? %>
-  
+
   <li><%= link_to('Signout', destroy_user_session_path, method: :delete)%></li>
+  <li><%= link_to('My Wall', posts_path, method: :get)%></li>
+  <li>
+    <%= form_tag("/search", method: :get) do %>
+      <%= text_field_tag(:search, params[:search], class: "white-text search", placeholder: "Search by email") %>
+      <%= submit_tag("Search") %>
+    <% end %>
+
+  </li>
 <% else %>
   <li><%= link_to('Login', '/users/sign_in')%></li>
   <li><%= link_to('Signup', '/users/sign_up')%></li>

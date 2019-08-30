@@ -2,15 +2,13 @@
 
 class PostsController < ApplicationController
 
-  def new
-    @post = Post.new
-  end
+  # def new
+  #   @post = Post.new
+  # end
 
   def create
     if params[:post][:wall_id]
       wall_id = params[:post][:wall_id]
-      else
-      wall_id = current_user.id
     end
     @post = Post.create(message: params[:post][:message], wall_id: wall_id, author_id: current_user.id)
     redirect_to "/wall/#{wall_id}"
@@ -45,6 +43,15 @@ class PostsController < ApplicationController
 
   def redirect
     redirect_to "/wall/#{current_user.id}"
+  end
+
+  def search
+    @user = User.find_by email: params[:search]
+
+    if @user
+      redirect_to "/wall/#{@user.id}"
+    end
+
   end
 
 end
