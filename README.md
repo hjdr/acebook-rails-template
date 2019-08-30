@@ -20,7 +20,7 @@ First, clone this repository. Then:
 ```
 
 ## Methodology
-We were an agile team! This is how we fulfilled Kent's 12 principles of Agile Methodology:
+We were an agile team! This is how we fulfilled Kent Beck's 12 principles of Agile Methodology:
 
 #### 1. Customer satisfaction through early and continuous delivery of useful software
 We used Travis CI & Heroku to continuously integrate and deliver software. Our minimum viable product was up and running by day 4 of the project.
