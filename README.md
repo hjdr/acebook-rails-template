@@ -6,25 +6,6 @@ Makers group project - creating a fullstack web app in the form of a Facebook cl
 
 After completing the basic user requirements our next task was migrate the deployment of our website from Heroku onto AWS. As if making sense of the amazon documentation wasn't a gruelling task by itself, we faced some seriously obscure version control errors with Bundler and asset compilation. When I say seriously obscure, I mean at one point we googled a stack trace (these are generic folder names FYI) and it only yielded one search result on google. With determination, perseverance, sudo-ing around in root folders we never knew existed, and some serious digging on stack overflow, we still managed to deploy it on time before the deadline. 
 
-## Run it yourself
-
-## Methodology
-
-
-
-REQUIRED INSTRUCTIONS:
-
-1. Fork this repository to `acebook-teamname` and customize
-   the below\*\*
-
-[You can find the engineering project outline here.](https://github.com/makersacademy/course/tree/master/engineering_projects/rails)
-
-2. The card wall is here: <please update>
-
-## How to contribute to this project
-
-See [CONTRIBUTING.md](CONTRIBUTING.md)
-
 ## Quickstart
 
 First, clone this repository. Then:
@@ -38,7 +19,8 @@ First, clone this repository. Then:
 > bin/rails server # Start the server at localhost:3000
 ```
 
-## Project Governance
+## Methodology
+We were an AGILE team! This meant ...
 
 ### Everyday:
 
